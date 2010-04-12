@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+require 'open-uri'
+require 'tempfile'
+require 'zlib'
+require 'rubygems'
+require 'yaml'
+require 'zip/zipfilesystem'
+require 'archive/tar/minitar'
+
+include Archive::Tar
+
+w_dir = File.expand_path(File.dirname(__FILE__))
+bundles_dir = File.join(w_dir, '../bundle')
+config = YAML.load(File.open(File.join(w_dir, '../config/plugins.yml')))
+
+pathogen_f_path = File.join(w_dir, '../autoload/pathogen.vim')
+unless File.exist?(pathogen_f_path)
+  FileUtils.mkdir_p(File.dirname(pathogen_f_path))
+  File.open(pathogen_f_path, 'w') {|f| f << open('http://github.com/tpope/vim-pathogen/raw/master/autoload/pathogen.vim').read}
+end
+
+FileUtils.mkdir_p(bundles_dir) unless File.exist?(bundles_dir)
+FileUtils.cd(bundles_dir)
+Dir['*'].each {|d| FileUtils.rm_rf d}
+
+config.each do |plugin|
+  name, dir = plugin['names'].first, plugin['dir']
+  if plugin.has_key?('repo') && plugin['repo'] =~ /^git:\/\/.*\.git$/
+    puts "  Unpacking #{name} into #{dir}"
+    `git clone #{plugin['repo']} #{dir}`
+    FileUtils.rm_rf(File.join(dir, '.git'))
+  elsif plugin.has_key?('vim_org_id')
+    puts '  Downloading ' + name
+    url = "http://www.vim.org/scripts/download_script.php?src_id=#{plugin['vim_org_id']}"
+    case plugin['file_type']
+    when 'vim'
+      f_path = File.join(dir, plugin['plugin_type'], dir + '.vim')
+      FileUtils.mkdir_p(File.dirname(f_path))
+      File.open(f_path, 'w') {|f| f << open(url).read}
+    when 'tar.gz', 'tgz'
+      Minitar.unpack(Zlib::GzipReader.new(open(url)), dir)
+    when 'zip'
+      temp_f = Tempfile.new('vim_plugin')
+      temp_f << open(url).read
+      temp_f.flush
+      Zip::ZipFile.open(temp_f.path) do |zip_f|
+        zip_f.each do |entry|
+          f_path = File.join(dir, entry.name)
+          FileUtils.mkdir_p(File.dirname(f_path)) unless File.exist?(File.dirname(f_path))
+          zip_f.extract(entry, f_path)
+        end
+      end
+    else
+      raise '  Bad file_type: ' + plugin['file_type']
+    end
+  else
+    raise '  Bad config (missing both vim_org_id and repo keys)'
+  end
+end

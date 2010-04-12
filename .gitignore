@@ -1,0 +1,8 @@
+yankring_history*.txt
+config/plugins.yml
+autoload
+bundle
+spell
+templates
+tmp
+view

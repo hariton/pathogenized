@@ -1,0 +1,279 @@
+---
+
+- names: ['The NERD Commenter']
+  authors: [Marty Grenfell]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=1218
+  repo: git://github.com/scrooloose/nerdcommenter.git
+  description: 'A plugin that allows for easy commenting of code for many filetypes'
+  comment:
+  plugin_type: plugin
+  dir: nerdcommenter
+
+- names: ['The NERD tree']
+  authors: [Marty Grenfell]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=1658
+  repo: git://github.com/scrooloose/nerdtree.git
+  description: 'A tree explorer plugin for navigating the filesystem'
+  comment:
+  plugin_type: plugin
+  dir: nerdtree
+
+- names: [ruby.vim]
+  authors: [Tim Pope]
+  urls:
+    - http://vim-ruby.rubyforge.org/
+  repo: git://github.com/vim-ruby/vim-ruby.git
+  description: 'Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more'
+  plugin_type: plugin
+  dir: ruby
+
+- names: [rails.vim]
+  authors: [Tim Pope]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=1567
+  repo: git://github.com/tpope/vim-rails.git
+  description: 'Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more'
+  comment:
+  plugin_type: plugin
+  dir: rails
+
+- names: [surround.vim]
+  authors: [Tim Pope]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=1697
+  repo: git://github.com/tpope/vim-surround.git
+  description: 'Delete/change/add parentheses/quotes/XML-tags/much more with ease'
+  comment:
+  plugin_type: plugin
+  dir: surround
+
+- names: [ragtag.vim]
+  authors: [Tim Pope]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=1896
+  repo: git://github.com/tpope/vim-ragtag.git
+  description: 'A set of mappings for HTML, XML, PHP, ASP, eRuby, JSP, and more (formerly allml)'
+  comment:
+  plugin_type: plugin
+  dir: ragtag
+
+- names: [delimitMate]
+  authors: [Israel Chauca Fuentes]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=2754
+  repo: git://github.com/Raimondi/delimitMate.git
+  description: 'Provides auto-balancing and some expansions for parens, quotes, etc.'
+  comment:
+  plugin_type: plugin
+  dir: delimitmate
+
+- names: [ack.vim]
+  authors: [Miles Sterrett]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=2572
+  # repo: git://github.com/mileszs/ack.vim.git
+  description: "Plugin for the Perl module / CLI script 'ack'"
+  comment:
+  plugin_type: plugin
+  vim_org_id: 10433
+  file_type: tar.gz
+  dir: ack
+
+- names: [Align]
+  authors: [Charles Campbell]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=294
+  repo: git://github.com/tsaleh/vim-align.git
+  description: 'Align: Help folks to align text, eqns, declarations, tables, etc'
+  comment: 'Look this examples: http://mysite.verizon.net/astronaut/vim/align.html#Examples'
+  plugin_type: plugin
+  dir: align
+
+- names: [gardener]
+  authors: [Maestro Entheon, Hariton Mizgir]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=294
+  repo: git://github.com/hariton/gardener.git
+  description: 'Dark and colorful forrest khaki theme works with 256 color xterms'
+  comment:
+  plugin_type: colors
+  dir: gardener
+
+- names: [templates]
+  authors: [Aristotle Pagaltzis, Hariton Mizgir]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=1172
+  repo: git://github.com/hariton/simple-vim-templates.git
+  description: 'Load filetype templates for new files'
+  plugin_type: plugin
+  dir: templates
+
+- names: [fugitive.vim]
+  authors: [Tim Pope]
+  urls:
+    - http://github.com/tpope/vim-fugitive
+    - http://www.vim.org/scripts/script.php?script_id=2975
+  repo: git://github.com/tpope/vim-fugitive.git
+  description: 'Git wrapper'
+  comment: 'This plugin depends onvim-git'
+  plugin_type: plugin
+  dir: fugitive
+
+- names: [vim-git]
+  authors: [Tim Pope]
+  urls:
+    - http://github.com/tpope/vim-git
+    - http://www.vim.org/scripts/script.php?script_id=1654
+  repo: git://github.com/tpope/vim-git.git
+  description: 'Git runtime files'
+  comment:
+  plugin_type: plugin
+  dir: git
+
+- names: [snipMate]
+  authors: [Michael Sanders]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=2540
+  repo: git://github.com/msanders/snipmate.vim.git
+  description: 'TextMate-style snippets for Vim'
+  comment:
+  plugin_type: plugin
+  dir: snipmate
+
+- names: [FuzzyFinder, fuf]
+  authors: [Takeshi Nishida]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=1984
+  description: 'buffer/file/command/tag/etc explorer with fuzzy matching'
+  comment:
+  plugin_type: plugin
+  vim_org_id: 11852 # 3.5, 2009-12-03, 7.0
+  file_type: zip
+  dir: fuzzy_finder
+
+- names: [AutoComplPop, acp]
+  authors: [Takeshi Nishida]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=1879
+  description: 'automatically opens popup menu for completions'
+  comment:
+  plugin_type: plugin
+  vim_org_id: 11894   # 2.14.1, 2009-12-12, 7.0, zip
+  file_type: zip
+  dir: auto_compl_pop
+
+- names: [matchit]
+  authors: [Benji Fisher]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=39
+  description: 'extended % matching for HTML, LaTeX, and many other languages'
+  comment:
+  plugin_type: plugin
+  vim_org_id: 8196
+  file_type: zip
+  dir: matchit
+
+- names: [bufexplorer]
+  authors: [jeff lanzarotta]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=42
+  description:
+  comment:
+  plugin_type: plugin
+  vim_org_id: 12363
+  file_type: zip
+  dir: bufexplorer
+
+- names: [Marks Browser]
+  authors: [Viktor Kojouharov]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=1706
+  description:
+  comment:
+  plugin_type: plugin
+  vim_org_id: 6408 # 0.9, 2006-11-13, 7.0
+  file_type: vim
+  dir: marksbrowser
+
+- names: [IndexedSearch]
+  authors: [Yakov Lerner]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=1682
+  description: "shows  'Nth match out of M'  at every search (index of match+total # matches)"
+  comment:
+  plugin_type: plugin
+  vim_org_id: 7062 # 070503, 2007-05-03, 6.0
+  file_type: vim
+  dir: indexed_search
+
+- names: [Scratch]
+  authors: [Yegappan Lakshmanan]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=664
+  plugin_type: plugin
+  vim_org_id: 2050 # 1.0, 2003-06-08, 6.0
+  file_type: vim
+  dir: scratch
+
+- names: [taglist.vim]
+  authors: [Yegappan Lakshmanan]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=273
+  description: 'Source code browser (supports C/C++, java, perl, python, tcl, sql, etc)'
+  plugin_type: plugin
+  vim_org_id: 7701 # 4.5, 2007-09-21, 6.0
+  file_type: zip
+  dir: taglist
+
+- names: [dbext.vim]
+  authors: [Peter Bagyinszki]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=356
+  description: 'Provides database access to many dbms'
+  plugin_type: plugin
+  vim_org_id: 11341 # 11.01, 2009-09-08, 7.0
+  file_type: zip
+  dir: dbext
+
+- names: [jQuery]
+  authors: [Bruno Michel]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=2416
+  description: 'some colorations for jQuery keywords and for CSS selectors'
+  comment:
+  plugin_type: syntax
+  vim_org_id: 12107 # 0.4, 2010-02-02, 6.0
+  file_type: vim
+  dir: jquery
+
+- names: [gist]
+  authors: [Yasuhiro Matsumoto]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=2423
+  plugin_type: plugin
+  vim_org_id: 12732 # 3.5, 2010-03-29, 7.0
+  file_type: vim
+  dir: gist
+
+- names: [showmarks.vim]
+  authors: [Anthony Kruize]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=152
+  description: 'Visually shows the location of marks'
+  plugin_type: plugin
+  vim_org_id: 3342 # showmarks.vim 	2.2 	2004-08-16 	6.0
+  file_type: vim
+  dir: showmarks
+
+- names: [YankRing]
+  authors: [David Fishburn]
+  urls:
+    - http://www.vim.org/scripts/script.php?script_id=1234
+  description: 'Maintains a history of previous yanks, changes and deletes'
+  comment:
+  plugin_type: plugin
+  vim_org_id: 12258
+  file_type: zip
+  dir: yankring
